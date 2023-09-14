@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Pagina HTML</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img id="fotoPerfil" src="./img/perfil.png" alt="" style="filter: grayscale(1);">
+        <br>
+        <br>
+        <h1 id="TxtEfeito"> { Bruno C. Araújo } </h1>
+    </header>
+    <nav style="background-color: #1a1818;">
+        <ul style="background-color: #010101; border-bottom: 1px solid #010101;">
+            <li id="btnSobreMim">{ &#128515 Sobre Mim }</li>
+            <li id="btnPortifolio">{ &#128216; Portfólio }</li>
+            <li id="btnContato">{ &#128210; Contato }</li>
+        </ul>
+    </nav>
+
+    <style>
+        .box-box {
+            /* height: 500px; */
+            width: 100vw;
+            min-height: 500px;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container{
+            /* background-color: aqua; */
+            width: 50%;
+            height: 100%;
+        }
+
+        @keyframes entradaTXT {
+            0%{
+                transform: translateX(25px);
+            }
+            50%{
+                transform: translateX(80px);
+            }
+            100%{
+                transform: translateX(15px);
+            }
+        }
+    </style>
+    <div class="box-box">
+
+        <div class="container">
+            <br><br>
+            <span id="renderConteudo" style="color: #9e9d9d;">
+                <div style="animation: entradaTXT 2s;">
+                <h2>Sobre Mim &#128515 </h2>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                <br>
+                <span style="display: flex;">
+                    <img src="./img/papel velho.png" alt="" >
+                    <img src="./img/papel velho.png" alt="">
+                </span>
+                </div>
+                <br>
+                <br>
+            </span>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Minha Pagina, todos direitos reservados.</p>
+    </footer>
+</body>
+<script type="text/javascript">
+
+    function maquinaEscrever(TxtEfeitoid) {
+        let TxtEfeito = document.getElementById(TxtEfeitoid);
+        let txtArray = TxtEfeito.innerHTML.split('');
+
+
+        TxtEfeito.innerHTML = "";
+
+
+        txtArray.forEach((key, value) => {
+            setTimeout(() => {
+                TxtEfeito.innerHTML += key;
+            }, 100 * value);
+        });
+        // console.log(txtArray);
+    }
+
+    maquinaEscrever('TxtEfeito');
+    // window.location.reload();
+
+
+
+
+    //inicinado variaveis
+    let boxOndeVaiRenderizar = document.getElementById('renderConteudo');
+
+
+    let btnSobreMim = document.getElementById('btnSobreMim');
+    btnSobreMim.addEventListener('click', ()=>{
+        let template = `
+                <div style="animation: entradaTXT 2s;">
+                <h2>Sobre Mim &#128515 </h2>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                <br>
+                <span style="display: flex;">
+                    <img src="./img/papel velho.png" alt="">
+                    <img src="./img/papel velho.png" alt="">
+                </span>
+                </div>
+                <br>
+                <br>
+                </div>
+        `;
+        boxOndeVaiRenderizar.innerHTML= "carregando...";
+        setTimeout(() => {
+            boxOndeVaiRenderizar.innerHTML= "";
+            boxOndeVaiRenderizar.innerHTML= template;
+        }, 1000);
+    });
+    let btnPortifolio = document.getElementById('btnPortifolio');
+        btnPortifolio.addEventListener('click', ()=>{
+        let template = `
+                <div style="animation: entradaTXT 2s;">
+                <h2>Portifolio &#128216; </h2>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                <br>
+                <span style="display: flex;">
+                    <img src="./img/astros.png" alt="" height="150px">
+                    <img src="./img/astros.png" alt="" height="150px">
+                    <img src="./img/astros.png" alt="" height="150px">
+                    <img src="./img/astros.png" alt="" height="150px">
+                    
+                </span>
+                </div>
+                <br>
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                </div>
+        `;
+        boxOndeVaiRenderizar.innerHTML= "carregando...";
+        setTimeout(() => {
+            boxOndeVaiRenderizar.innerHTML= "";
+            boxOndeVaiRenderizar.innerHTML= template;
+        }, 1000);
+    });
+
+    let btnContato = document.getElementById('btnContato');
+    btnContato.addEventListener('click', ()=>{
+        let template = `
+                <div style="animation: entradaTXT 2s;">
+                <h2>Contato &#128210; </h2>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+
+                <br>
+                <br>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking
+                at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop
+                publishing
+                packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+                ipsum'
+                will uncover many web sites still in their infancy. Various versions have evolved over the years,
+                sometimes by
+                accident, sometimes on purpose (injected humour and the like).
+                <br>
+                <br>
+                <br>
+                <span style="display: flex;">
+                    <img src="./img/backgroud.png" alt="" height="200px">
+                    
+                </span>
+                </div>
+                <br>
+                <br>
+                
+                </div>
+        `;
+        boxOndeVaiRenderizar.innerHTML= "carregando...";
+        setTimeout(() => {
+            boxOndeVaiRenderizar.innerHTML= "";
+            boxOndeVaiRenderizar.innerHTML= template;
+        }, 1000);
+        
+    });
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
